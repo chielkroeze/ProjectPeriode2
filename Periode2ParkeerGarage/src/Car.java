@@ -1,4 +1,4 @@
-//package Parkeersimulator;
+//package Parkeersimulatorr;
 
 
 import java.awt.*;
