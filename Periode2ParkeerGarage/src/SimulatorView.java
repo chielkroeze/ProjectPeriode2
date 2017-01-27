@@ -2,11 +2,9 @@
 
 import javax.swing.*;
 import java.awt.*;
-import javax.swing.JFrame;
 
 public class SimulatorView extends JFrame {
-   
-	private CarParkView carParkView;
+    private CarParkView carParkView;
     private int numberOfFloors;
     private int numberOfRows;
     private int numberOfPlaces;
@@ -19,17 +17,32 @@ public class SimulatorView extends JFrame {
         this.numberOfPlaces = numberOfPlaces;
         this.numberOfOpenSpots =numberOfFloors*numberOfRows*numberOfPlaces;
         cars = new Car[numberOfFloors][numberOfRows][numberOfPlaces];
+    
         
         carParkView = new CarParkView();
 
         Container contentPane = getContentPane();
         contentPane.add(carParkView, BorderLayout.CENTER);
         pack();
+        
+        //Hier wordt de button "1 stap verder" aangemaakt.
+        JButton buttonOne = new JButton("1 stap verder");
+        contentPane.add(buttonOne, BorderLayout.NORTH);
+      
+        //Hier wordt de button "100 stappen verder" aangemaakt.
+        JButton buttonHunderd = new JButton("100 stappen verder");
+        contentPane.add(buttonHunderd, BorderLayout.SOUTH);
+        
+         //Hier wordt de button "10 stappen verder" aangemaakt.
+        JButton buttonTen = new JButton("10 stappen verder");
+        contentPane.add(buttonTen, BorderLayout.EAST);
+       
         setVisible(true);
-
         updateView();
     }
 
+
+    
     public void updateView() {
         carParkView.updateView();
     }

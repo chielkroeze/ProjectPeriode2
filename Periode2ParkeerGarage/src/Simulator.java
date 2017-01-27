@@ -1,8 +1,5 @@
 //package Parkeersimulator;
 
-/**
-	 * Importeert de package.
-	 */
 import java.util.Random;
 
 public class Simulator {
@@ -10,11 +7,12 @@ public class Simulator {
 	private static final String AD_HOC = "1";
 	private static final String PASS = "2";
 	
+	
 	private CarQueue entranceCarQueue;
     private CarQueue entrancePassQueue;
     private CarQueue paymentCarQueue;
     private CarQueue exitCarQueue;
-    private SimulatorView simulatorView;	
+    private SimulatorView simulatorView;
 
     private int day = 0;
     private int hour = 0;
